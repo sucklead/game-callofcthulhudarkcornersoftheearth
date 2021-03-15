@@ -1,0 +1,19 @@
+{
+  "name": "game-callofcthulhudarkcornersoftheearth",
+  "version": "0.4.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^7.22.0"
+  },
+  "devDependencies": {
+    "ts-loader": "5.3.3",
+    "vortex-api": "Nexus-Mods/vortex-api"
+  },
+  "scripts": {
+    "main": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
