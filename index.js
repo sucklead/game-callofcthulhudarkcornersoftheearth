@@ -85,9 +85,10 @@ function checkDCoTEHook(api) {
       const result = {
         description: {
             short: 'DCoTEHook is not installed!',
-            long: 'DCoTEHook is required for any mods to work with Call of Cthulhu: Dark Corners of the Earth.'
+            long: 'DCoTEHook is required for any mods to work with Call of Cthulhu: Dark Corners of the Earth.\n'
+                  + '(https://www.nexusmods.com/callofcthulhudarkcornersoftheearth/mods/3)'
         },
-        severity: 'warning'
+        severity: 'warning',
       };
       return Promise.resolve(result);
     }
