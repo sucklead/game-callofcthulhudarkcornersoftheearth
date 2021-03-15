@@ -86,9 +86,10 @@ function checkDCoTEHook(api) {
         description: {
             short: 'DCoTEHook is not installed!',
             long: 'DCoTEHook is required for any mods to work with Call of Cthulhu: Dark Corners of the Earth.\n'
-                  + '(https://www.nexusmods.com/callofcthulhudarkcornersoftheearth/mods/3)'
+                  + 'Click Fix to head to the download page (https://www.nexusmods.com/callofcthulhudarkcornersoftheearth/mods/3)'
         },
         severity: 'warning',
+        automaticFix: () => {return util.opn(DCOTEHOOK_MODPAGE).catch(() => Promise.resolve(undefined))}
       };
       return Promise.resolve(result);
     }
@@ -122,12 +123,6 @@ async function findGame() {
     log('debug', 'Game not found!');
     return Promise.reject('Game not found!');
   }
-}
-
-
-function simplePrepareForModding(discovery) {
-  return fs.ensureDirWritableAsync(path.join(discovery.path, 'mods'));
-    //.then(() => checkForQMM(api, qModPath));
 }
 
 function testSupportedContent(files, gameId) {
