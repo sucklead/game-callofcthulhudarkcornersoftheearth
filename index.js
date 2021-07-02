@@ -121,7 +121,7 @@ async function findGame() {
     return Promise.resolve(game.gamePath);
   } catch (err) {
     log('debug', 'Game not found!');
-    return Promise.reject('Game not found!');
+    return Promise.reject(new Error('Game not found!'));
   }
 }
 
